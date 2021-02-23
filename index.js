@@ -44,6 +44,7 @@ app.use(config);
 app.use(express.static("web"));
 
 app.listen(port, app, async () => {
+    
     console.log("[Brito] :: API escuchando en puerto", port, 'Conectando a MongoDb...');
 
     await mongoose.connect(`mongodb://${process.env.URL_MONGODB}/${process.env.BD_MONGODB}?authSource=admin&replicaSet=replset`,
